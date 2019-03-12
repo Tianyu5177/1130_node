@@ -27,6 +27,7 @@
 * */
 
 //立即执行函数
+/*
 setImmediate(()=>{
   console.log('setImmediate被调用')
 })
@@ -38,5 +39,14 @@ process.nextTick(()=>{
 
 setTimeout(()=>{
   console.log('setTimeout被调用了')
-},2000)
-console.log('主线程上的代码')
+})
+console.log('主线程上的代码')*/
+
+
+setImmediate(()=>{
+  console.log('setImmediate被调用')
+})
+
+setTimeout(()=>{
+  console.log('setTimeout被调用了')
+})
