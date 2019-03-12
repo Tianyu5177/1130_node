@@ -46,11 +46,13 @@
 
           1.npm view xxxx versions :查看远程npm仓库中xxxx包的所有版本
 
-          2.npm get prefix ：获取全局安装的位置
+          2.npm view xxxx version :查看远程npm仓库中xxxx包的最新版本
 
-          3.npm audit fix:用于修复一些错误和bug
+          3.npm get prefix ：获取全局安装的位置
 
-          4.npm ls xxxx :用于查看当前搞工程安装的xxxx包的简介
+          4.npm audit fix:用于修复一些错误和bug
+
+          5.npm ls xxxx :用于查看当前搞工程安装的xxxx包的简介
 \
 * */
 

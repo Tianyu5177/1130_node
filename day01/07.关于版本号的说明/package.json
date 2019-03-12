@@ -1,0 +1,14 @@
+{
+  "name": "1130_test_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "关于版本号.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "2.1.2"
+  }
+}
