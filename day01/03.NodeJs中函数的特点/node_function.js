@@ -21,6 +21,6 @@
 
 //demo(1,2,3)
 
-//console.log(arguments.callee.toString())
+console.log(arguments.callee.toString())
 //console.log(__filename)
 console.log(__dirname)
