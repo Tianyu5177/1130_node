@@ -22,7 +22,9 @@
 let fs = require('fs')
 
 //创建一个可写流（构建出一个水管）
-let ws = fs.createWriteStream('./hello2.txt')
+let ws = fs.createWriteStream('./hello2.txt',{
+  start:30
+})
 
 //给流绑定监听
 ws.on('open',()=>{
