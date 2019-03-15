@@ -1,0 +1,11 @@
+{
+  "name": "1130_demo_test1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Tianyu5177/1130_node.git",
+  "author": "tianyu <tianyu@hahagmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.4.19"
+  }
+}
