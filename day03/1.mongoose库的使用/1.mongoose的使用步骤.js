@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 
 //2.使用mongoose模块连接数据库
-mongoose.connect('mongodb://localhost:27017/students2',{useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/test',{useNewUrlParser: true})
 
 let myPromise = new Promise((resolve,reject)=>{
   //3.绑定监听（监听数据库是否连接成功）
