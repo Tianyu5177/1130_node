@@ -69,8 +69,8 @@ let myPromise = new Promise((resolve,reject)=>{
 
   //1.向数据库中写入数据的两种方式
   //第一种保存数据的方式
-  /*  //4.创建一个插入的实例对象（真正的数据,即文档对象）--------------模拟出一个人
-  let stu1 = new studentsModel({
+    //4.创建一个插入的实例对象（真正的数据,即文档对象）--------------模拟出一个人
+/*  let stu1 = new studentsModel({
     stu_id:'0002',
     stu_name:'班长',
     stu_age:18,
@@ -86,7 +86,7 @@ let myPromise = new Promise((resolve,reject)=>{
   })*/
 
   //第二种保存数据的方式(模型.方法)
-  /*  studentsModel.create({
+/*    studentsModel.create({
     stu_id:'0003',
     stu_name:'张江伟',
     stu_age:34,
@@ -97,6 +97,18 @@ let myPromise = new Promise((resolve,reject)=>{
     if(!err) console.log(`数据保存成功${data}`)
     else console.log(err)
   })*/
+
+  let res = studentsModel.create({
+    stu_id:'0010',
+    stu_name:'小猪佩奇2',
+    stu_age:12,
+    stu_sex:'男',
+    stu_hobby:['女','女'],
+    stu_info:'一个颜值非常帅气的男人',
+  })
+
+  let res2 = await res
+  console.log(res2);
 
 
   //2.从数据库中查找数据的方法
@@ -110,14 +122,14 @@ let myPromise = new Promise((resolve,reject)=>{
   })*/
 
   //3.修改数据库中的信息
-  studentsModel.deleteMany({stu_sex:'女'},(err,data)=>{
+/*  studentsModel.deleteMany({stu_sex:'女'},(err,data)=>{
     if (!err){
       console.log(data)
     }
     else{
       console.log(err)
     }
-  })
+  })*/
 
 
 
