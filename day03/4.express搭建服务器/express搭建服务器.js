@@ -6,6 +6,8 @@
 let express = require('express')
 //2.创建应用对象
 let app = express();
+//隐藏具体框架名称
+app.disable('x-powered-by')
 
 /*
 *   请求的分类（主流）：
@@ -29,7 +31,7 @@ app.get('/',(request,response)=>{
   *   3.http://192.168.24.64:3000
   * */
   console.log(request.query);
-  console.log(a);
+  //console.log(a);
   response.send('<h3>我是最帅的人</h3>')
 })
 app.get('/test',(request,response)=>{
