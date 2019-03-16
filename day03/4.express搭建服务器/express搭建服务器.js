@@ -29,6 +29,7 @@ app.get('/',(request,response)=>{
   *   3.http://192.168.24.64:3000
   * */
   console.log(request.query);
+  console.log(a);
   response.send('<h3>我是最帅的人</h3>')
 })
 app.get('/test',(request,response)=>{
