@@ -16,6 +16,10 @@ app.disable('x-powered-by')
 app.use(express.urlencoded({extended:true}))
 //使用内置中间件暴露静态资源
 app.use(express.static('public'))
+//设置模板引擎
+app.set('view engine','ejs')
+//设置模板目录
+app.set('views','./views')
 
 //确保数据库连接成功,数据库连接成功之后的代码
 db.then(()=>{

@@ -13,16 +13,16 @@ let {resolve} = require('path')
 
 //登录页面路由
 router.get('/login',(req,res)=>{
-  let url = resolve(__dirname,'../public/login.html')
-  //console.log(url);
-  res.sendFile(url)
+  let {email} = req.query
+  let errMsg = {email}
+  //errMsg.name = name
+  res.render('login',{errMsg})
 })
 
 //注册页面路由
 router.get('/register',(req,res)=>{
-  let url = resolve(__dirname,'../public/register.html')
-  //console.log(url);
-  res.sendFile(url)
+  let errMsg = {}
+  res.render('register',{errMsg})
 })
 
 
