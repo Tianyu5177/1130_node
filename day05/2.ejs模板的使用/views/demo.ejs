@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<!--
+
+        1.< % % >  标签里可以写任意的js代码，但是不会向浏览器输出任何内容。
+        2.< %= % > 渲染数据到页面，不渲染html标签，转义标签了------常用
+        3.< %- % > 渲染数据到页面，渲染htm标签，没转义
+-->
+<body>
+
+    <!--< % for (var i = 0;i<data.length;i++) { % >
+
+        < %= data[i].name% >
+        < %= data[i].age% >
+        < %= data2[i].sex% >
+
+    < %}% >-->
+
+<%= data.name%>
+<%= data.age%>
+
+
+</body>
+</html>
