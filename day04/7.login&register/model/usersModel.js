@@ -37,6 +37,6 @@ let usersSchema = new Schema({
 })
 
 //4.创建模型对象 ------------------告诉保安你的规则
-let usersModel = mongoose.model('students',usersSchema)
+let usersModel = mongoose.model('users',usersSchema)
 
 module.exports = usersModel

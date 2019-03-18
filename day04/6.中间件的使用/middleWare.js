@@ -36,7 +36,7 @@ app.use(express.static('public'))
       2.第三方中间
           --不是express提供的，使我们自己下载的
           app.use(bodyParser.urlencoded({extended:true}))
-      3.内置中间件
+      3.express内置中间件
           --express给我们提供的中间件
           --app.use(express.urlencoded({extended:true}))
           --app.use(express.static('public'))
