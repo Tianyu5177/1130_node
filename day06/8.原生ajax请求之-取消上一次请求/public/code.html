@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax_get</title>
+</head>
+<body>
+<button id="btn">点击我获取验证码</button>
+
+<script>
+  let lastXhr;//存取的是上一次的xhr对象
+  let btn = document.getElementById('btn')
+  btn.addEventListener('click',()=>{
+    if(lastXhr){
+      lastXhr.abort()
+    }
+    lastXhr = getCode('GET','http://localhost:3000/code')
+  })
+  
+  //获取验证码的方法
+  function getCode(method,url) {
+    
+    let xhr = new XMLHttpRequest()
+    
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState === 4 && xhr.status === 200){
+        console.log(xhr.responseText)
+      }
+    }
+    
+    xhr.open(method,url)
+    
+    xhr.send()
+    
+    return xhr
+    
+  }
+  
+</script>
+
+
+</body>
+</html>

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ajax_get</title>
+  <title>ajax_post</title>
 </head>
 <body>
-<button id="btn">点击我发送get请求</button>
+<button id="btn">点击我发送post请求</button>
 <!--
   
   一个原生Ajax请求的步骤：
@@ -33,7 +33,7 @@
         *     4：数据完全回来了
         * */
         if(xhr.readyState === 4 && xhr.status === 200){
-          console.log(xhr.responseText.length)
+          console.log(xhr.responseText)
         }
         
         //0的状态一直都不会被触发，原因是：xhr对象已经创建的时候就是0的状态
@@ -56,12 +56,12 @@
       }
 
       //3.设置请求信息（请求方式、请求地址、请求参数）
-      xhr.open('GET','http://localhost:3000/demo1?name=kobe')
-      //设置请求头信息，下面的代码代表着：告诉服务器，你发送的是纯文本数据
-      xhr.setRequestHeader('content-type','text/plain')//get请求不常用
+      xhr.open('POST','http://localhost:3000/demo2')
+      //设置请求头信息，告诉服务器，你的数据是来自于一个urlencoded的编码方式
+      xhr.setRequestHeader('content-type','application/x-www-form-urlencoded')//post请求必须携带
 
       //4.发送请求
-      xhr.send()
+      xhr.send('name=kobe&age=12')
     })
   
   
