@@ -11,12 +11,14 @@ db.then(()=>{
 
     //获取所有省份信息
     app.get('/getAllProvince',async(req,res)=>{
+      res.set('Access-Control-Allow-Origin', 'http://localhost:63342');
       let data = await citiesModel.find({level:1},{province:1,name:1,_id:0})
       res.send({state:1,data})
     })
 
     //根据所选省份获取当前省下的所有市信息
     app.get('/getCitiesByProvince',async(req,res)=>{
+      res.set('Access-Control-Allow-Origin', 'http://localhost:63342');
       let {province} = req.query
       let data = await citiesModel.find({level:2,province},{name:1,city:1,_id:0})
       res.send({state:1,data})
@@ -24,6 +26,7 @@ db.then(()=>{
 
   //根据所选省份、市，获取当前市下的所有区县信息
     app.get('/getCountyByProvinceCity',async(req,res)=>{
+      res.set('Access-Control-Allow-Origin', 'http://localhost:63342');
       let {province} = req.query
       let {city} = req.query
       let data = await citiesModel.find({level:3,province,city},{name:1,code:1,_id:0})
