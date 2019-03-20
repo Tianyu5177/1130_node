@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax_get</title>
+</head>
+<body>
+
+<button id="btn">点我发送ajax的GET请求</button>
+
+<script>
+
+  let btn = document.getElementById('btn');
+  btn.addEventListener('click',function () {
+    
+    //1.创建XMLHttpRequest实例
+    let xhr = new XMLHttpRequest();
+    
+    //2.绑定监听
+    xhr.onreadystatechange = function () {
+      if(xhr.readyState === 4 && xhr.status === 200){
+        console.log(xhr.responseText)
+      }
+    }
+
+    //3.设置请求信息（请求方式、请求地址、请求参数等）。
+    xhr.open('GET','http://localhost:3000/demo1?t='+Date.now())
+    
+    //设置请求头信息（GET中用的不多）
+    xhr.setRequestHeader('content-type','text/plain')//告诉服务器你发送的是一个纯文本数据
+
+    //4.发送请求。
+    xhr.send()
+    
+    /*
+    * 对于chrome和firefox浏览器来说：
+    *   只要get请求的请求地址和请求参数都不发生变化，那么会走缓存（走的是协商缓存）
+    * 对于ie来说：
+    *   只要get请求的请求地址和请求参数都不发生变化，那么走缓存（强制缓存）
+    *   问题：数据第二次请求的时候，不能及时更新
+    *   解决：穿第一个无关参数，一般传时间戳
+    *
+    *
+    * */
+    
+    
+    
+  })
+
+
+</script>
+<h3>kjhgkjh</h3>
+</body>
+</html>
