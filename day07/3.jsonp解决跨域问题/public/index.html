@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button id="btn">点我获取数据</button>
+
+
+<script>
+  
+let btn = document.getElementById('btn')
+  btn.addEventListener('click',function () {
+    
+    //1.动态生成一个script节点
+    let scriptNode = document.createElement('script')
+    
+    //2.全局定义一个函数
+    window.getData = function (data) {
+      console.log(data)
+    }
+    
+    //3.指定请求地址
+    scriptNode.src = 'http://localhost:3000/test?callBack=getData'
+    
+    //4.添加节点
+    document.body.appendChild(scriptNode)
+    
+  })
+
+
+  
+
+  
+</script>
+
+</body>
+</html>
