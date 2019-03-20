@@ -10,11 +10,11 @@ app.get('/demo1',(req,res)=>{
   res.send('我收到了你ajax_get请求,')
 })
 
-app.post('/demo2',(req,res)=>{
+/*app.post('/demo2',(req,res)=>{
   let data = req.body
   console.log(data);
   res.send('我收到了你ajax_post请求')
-})
+})*/
 
 
 
